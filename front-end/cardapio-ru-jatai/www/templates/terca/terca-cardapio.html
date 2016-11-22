@@ -1,0 +1,118 @@
+<ion-view view-title="Cardápio RU - UFG Jataí" style="background-color:#ECECEC">
+  <ion-content class="padding">
+
+    <ion-slide-box on-slide-changed="slideHasChanged($index)">
+      <ion-slide>
+          <ion-list ng-repeat="almoco in almoco" class="lista">
+            <div ng-if="almoco.Desabilitado==0">
+              <ion-item class="item header-cardapio">
+                <h2>Almoço de Terça-Feira</h2>
+                <p style="color:#fff;">{{almoco.Data}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Arroz </b></p> 
+                <p>{{almoco.Arroz}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Feijão </b></p> 
+                <p>{{almoco.Feijao}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Prato protéico </b></p> 
+                <p>{{almoco.Proteico}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Ovolactovegetariano</b></p> 
+                <p>{{almoco.Vegetariano}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Guarnição</b></p> 
+                <p>{{almoco.Guarnicao1}}</p>
+              </ion-item>
+               <ion-item class="item-text-wrap no-padding">
+                <p><b>Saladas</b></p> 
+               <p>{{almoco.Salada1}}</p>
+                <p>{{almoco.Salada2}}</p>
+                <p>{{almoco.Salada3}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Suco </b></p> 
+                <p>{{almoco.Suco}}</p>
+              </ion-item>
+              <ion-item class="item-text-wrap no-padding">
+                <p><b>Sobremesa </b></p> 
+                <p>{{almoco.Sobremesa}}</p>  
+              </ion-item>
+              <br><br>
+            </div>
+           <div ng-if="almoco.Desabilitado==1">
+              <div style="background-color: #ff4d4d;text-align: center;">
+                <p><h2 style="color:#fff;">Atenção!</h2></p>
+                <p><h3 style="color:#fff;">Nessa Terça-Feira dia {{almoco.Data}} o R.U não funcionará!</h3></p>
+                <p><h2 style="color:#fff;">Motivo</h2></p>
+                <p><h3 style="color:#fff;">{{almoco.DesabilitadoMotivo}} </h3></p>
+                <br><br><br><br><br>
+              </div>
+            </div>
+          </ion-list>
+          <br>
+      </ion-slide>
+
+
+      <ion-slide> 
+          <ion-list ng-repeat="janta in janta" style="text-align: center;overflow: hidden;">
+            <div ng-if="janta.Desabilitado==0">
+             <ion-item class="item header-cardapioJanta">
+              <h2>Jantar de Terça-Feira</h2>
+              <p style="color:#fff;">{{janta.Data}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Arroz </b></p> 
+              <p>{{janta.Arroz}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Feijão </b></p> 
+              <p>{{janta.Feijao}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Prato protéico </b></p> 
+              <p>{{janta.Proteico}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Ovolactovegetariano</b></p> 
+              <p>{{janta.Vegetariano}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Guarnição </b></p> 
+              <p>{{janta.Guarnicao1}}</p>
+            </ion-item>
+             <ion-item class="item-text-wrap no-padding">
+              <p><b>Saladas</b></p> 
+              <p>{{janta.Salada1}} </p>
+              <p>{{janta.Salada2}} </p>
+              <p>{{janta.Salada3}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Suco </b></p> 
+              <p>{{janta.Suco}}</p>
+            </ion-item>
+            <ion-item class="item-text-wrap no-padding">
+              <p><b>Sobremesa </b></p> 
+              <p>{{janta.Sobremesa}}</p>  
+            </ion-item>
+          </div>
+        <br><br>
+          <div ng-if="janta.Desabilitado==1">
+            <div style="background-color: #ff4d4d;text-align: center;">
+              <p><h2 style="color:#fff;">Atenção!</h2></p>
+              <p><h3 style="color:#fff;">Nessa Terça-Feira dia {{janta.Data}} o R.U não funcionará!</h3></p>
+              <p><h2 style="color:#fff;">Motivo</h2></p>
+              <p><h3 style="color:#fff;">{{janta.DesabilitadoMotivo}} </h3></p>
+              <br><br><br><br><br>
+            </div>
+          </div>
+        </ion-list>
+    </ion-slide>
+  </ion-slide-box>
+</ion-content>
+</ion-view>

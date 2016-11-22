@@ -1,0 +1,23 @@
+<ion-view view-title="Cardápio RU - UFG Jataí" style="background-color:#ECECEC">
+  <ion-content>
+<div ng-if="respondeu==null">
+<br>
+<p style="text-align: center;font-size: 20px;">Qual nota você atribui às REFEIÇÕES do RU? </p>
+<br>
+  <form  name="signup_form" class="form-container" novalidate ng-submit="enviar()">
+    <input type="hidden" ng-model="data.enqueteId" value="1">
+        <ion-radio ng-repeat="item in enquete1"
+                   ng-value="item.value"
+                   ng-model="data.resposta">
+          {{ item.text }}
+        </ion-radio>
+    <button class="button button-block button-balanced">Responder</button> 
+  </form>
+</div>
+<div ng-if="respondeu ==1" style="text-align: center">
+<img  src="http://anvpc.org/wp-content/uploads/2013/07/ok.png">
+<h2>Obrigado!</h2>
+<h2>Você respondeu a enquete disponível</h2>
+</div>
+</ion-content>
+</ion-view>

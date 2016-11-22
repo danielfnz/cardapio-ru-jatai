@@ -1,0 +1,60 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #1976D2 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+
+
+.no-padding {
+    padding: 0px !important;
+    text-align:center;
+
+}
+.fundoColor {
+background-color:#F5F5F5;
+
+}
+
+.header-cardapio {
+padding: 4px !important;
+background-color: #2196F3 !important;
+text-align:center;
+font-weight: bold  !important;
+}
+
+.header-cardapioJanta {
+padding: 4px !important;
+background-color: #03A9F4 !important;
+text-align:center;
+font-weight: bold  !important;
+}
+
+.pane {
+    background-color: #ccc;
+
+}
+.slider .slider-pager {
+margin-bottom:22px;
+} 
+
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+

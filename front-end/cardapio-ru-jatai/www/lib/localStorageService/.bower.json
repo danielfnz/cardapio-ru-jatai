@@ -1,0 +1,20 @@
+{
+  "name": "localStorageService",
+  "main": "./src/storageprovider.js",
+  "dependencies": {
+    "angular": "~1.2.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.1"
+  },
+  "homepage": "https://github.com/Zmetser/localstorageservice",
+  "_release": "e725675bb4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e725675bb45a978951cb4fbbc79b52a99abbb266"
+  },
+  "_source": "https://github.com/Zmetser/localstorageservice.git",
+  "_target": "*",
+  "_originalSource": "angular-localStorageService"
+}
